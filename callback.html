@@ -4,7 +4,7 @@
 <p class="muted">이 코드는 몇 분 안에 한 번만 쓸 수 있습니다. 대화창에는 붙이지 말고, 연결 프로그램 창에만 붙여 넣으세요. · This one-time code expires in minutes.</p>
 <script>
 var q=new URLSearchParams(location.search),c=q.get('code'),e=q.get('error'),b=document.getElementById('box');
-if(c){b.innerHTML='<p>연결 코드 · Code</p><p><input id="c" readonly style="width:100%;padding:8px;font-size:1rem"></p><p><button id="k" style="padding:8px 16px">복사 · Copy</button></p>';
+if(c){b.innerHTML='<p><b>Authorized.</b> Copy this one-time code into the Mallang Haru Uploader on my computer. · 연결 코드</p><p><input id="c" readonly style="width:100%;padding:8px;font-size:1rem"></p><p><button id="k" style="padding:8px 16px">복사 · Copy</button></p>';
 var i=document.getElementById('c');i.value=c;document.getElementById('k').onclick=function(){i.select();try{navigator.clipboard.writeText(c)}catch(x){document.execCommand('copy')}this.textContent='복사됨 · Copied';};}
 else if(e){b.textContent='연결 실패 · Error: '+e+' '+(q.get('error_description')||'');}
 else{b.textContent='코드가 없습니다 · No code in this address.';}
